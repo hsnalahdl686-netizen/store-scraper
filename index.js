@@ -25,7 +25,6 @@ app.get('/api/scrape', async (req, res) => {
         const $ = cheerio.load(data);
         const items = [];
 
-        // استخراج البيانات من الوسوم الوصفية أو الصور المتاحة
         const ogTitle = $('meta[property="og:title"]').attr('content') || $('title').text();
         const ogImage = $('meta[property="og:image"]').attr('content');
 
